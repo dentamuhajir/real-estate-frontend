@@ -5,7 +5,7 @@ function Header() {
         <div class="header">
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-                    <a class="navbar-brand"><img src="assets/brand/logo.png" alt="" /></a>
+                    <a class="navbar-brand"><img src={require('../../assets/Images/Logo/logo.png')} alt="" /></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                         aria-label="Toggle navigation">
