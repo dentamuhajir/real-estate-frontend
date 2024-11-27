@@ -1,0 +1,97 @@
+:root {
+    --bsiprimary: #00C3B2;
+    --bsisecondary: #F1B434;
+}
+
+.header {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-icon {
+    margin-right: 5px;
+}
+
+.nav-header .nav-link {
+    position: relative;
+}
+
+.active {
+    color: #00C3B2;
+}
+
+.nav-link:hover {
+    color: #00C3B2;
+}
+
+.nav-header .nav-link::after {
+    color: #00C3B2;
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: #00C3B2;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-header .nav-link:hover::after {
+    width: 30%;
+}
+
+a.nav-link.active.active-link {
+    color: #00C3B2;
+}
+
+.nav-header .nav-link.active-link::after {
+    width: 30%;
+}
+
+.nav-header .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    background-color: #00C3B2;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-header .nav-link:hover::after,
+.nav-header .nav-link:active::after {
+    width: calc(100% - 30px);
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-login {
+    cursor: pointer;
+}
