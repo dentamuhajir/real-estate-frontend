@@ -26,9 +26,9 @@ function Footer() {
                         Kantor Pusat Gedung The Tower, Jl Gatot Subroto No.27 Kelurahan Karet Semanggi, Kecamatan Setiabudi, Jakarta Selatan 12930
                         </label>
                         <div class="d-flex flex-row">
-                            <img src="assets/social-media/twitter-logo.png" class="social-media-img" />
-                            <img src="assets/social-media/instagram-logo.png" class="social-media-img" />
-                            <img src="assets/social-media/facebook-logo.png" class="social-media-img" />
+                            <img src={require('../../assets/Images/Social-media/twitter-logo.png')} class="social-media-img"/>
+                            <img src={require('../../assets/Images/Social-media/instagram-logo.png')} class="social-media-img" />
+                            <img src={require('../../assets/Images/Social-media/facebook-logo.png')} class="social-media-img" />
                         </div>
                     </div>
                 </div>
