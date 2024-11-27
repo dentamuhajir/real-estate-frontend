@@ -4,6 +4,10 @@
 
 - install dependency/library
         npm install react-router-dom
+        npm install bootstrap
+# Reference
+- Project Structure 
+        https://www.xenonstack.com/insights/reactjs-project-structure
 
 # Git 
 
