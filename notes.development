@@ -2,7 +2,8 @@
 - install React
         npx create-react-app <folder-name>
 
-- install dependency
+- install dependency/library
+        npm install react-router-dom
 
 # Git 
 
