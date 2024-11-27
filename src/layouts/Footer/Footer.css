@@ -1,0 +1,99 @@
+footer {
+    display: flex;
+    min-width: 375px;
+    padding: 30px 120px 80px 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--full-rounded, 32px);
+    align-self: stretch;
+  
+    opacity: var(--sds-size-stroke-border);
+    background: var(--Gray-Color-50, #FAFAFA);
+  }
+  
+  .margin-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .title-link{
+    align-self: stretch;
+    color: var(--Primary-Color-BSI-Green, #00C3B2);
+    font-variant-numeric: lining-nums tabular-nums;
+  
+    /* typography/headline/H4 Bold-20 */
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+    text-decoration: none;
+  }
+  
+  a.title-link:hover {
+    color: #07afa0;
+  }
+  
+  .title-footer {
+    align-self: stretch;
+    color: var(--Text-Color-Black-100, rgba(0, 0, 0, 0.96));
+    font-variant-numeric: lining-nums tabular-nums;
+  
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 24px */
+    margin-bottom: 3px;
+  }
+  
+  .title-footer-data {
+    align-self: stretch;
+    color: var(--Text-Color-Black-80, rgba(0, 0, 0, 0.62));
+  
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 19.2px */
+    margin-bottom: 2px;
+  }
+  
+  .text-address {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-self: stretch;
+  
+    color: var(--Text-Color-Black-80, rgba(0, 0, 0, 0.62));
+  
+    /* typography/body/Body 1 Regular-16 */
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    opacity: var(--sds-size-stroke-border);
+  }
+  
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    align-self: stretch;
+    background: var(--Gray-Color-300, #E0E0E0);
+  }
+  
+  .social-media-img {
+    display: flex;
+    /* width: 24px;
+    height: 24px; */
+    width: 30px;
+    height: 30px;
+    padding: 2.5px 2.5px 2.498px 2.5px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .foot{
+      margin-left: -18%;
+    }
+  }
