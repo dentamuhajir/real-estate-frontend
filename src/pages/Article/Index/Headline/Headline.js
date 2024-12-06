@@ -20,7 +20,7 @@ const Headline = () => {
         getArticles()
     },[])
 
-    console.log(article)
+    console.log("article :" + article)
 
     return (
         <div class="container mt-5">
@@ -31,12 +31,12 @@ const Headline = () => {
                             <a routerLink="">
                                 <div class="card bg-dark text-white border-0 rounded-4">
                                     <img class="card-img image-headline rounded-4"
-                                        src="https://akcdn.detik.net.id/visual/2024/02/03/bsi_169.jpeg?w=650&q=90"
+                                        src={ item.Photo }
                                         alt="item.imageAlt" loading="lazy" />
                                     <div class="card-img-overlay rounded-4">
-                                        <h5 class="card-title">{ item.title } </h5>
+                                        <h5 class="card-title">{ item.Title } </h5>
                                         <p class="card-text"></p>
-                                        <p class="card-text">{ item.updateAt }  </p>
+                                        <p class="card-text">{ item.Category }  </p>
                                     </div>
                                 </div>
                             </a> 
