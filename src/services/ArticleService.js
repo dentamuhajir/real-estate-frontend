@@ -2,14 +2,15 @@ class ArticleService {
 
     fetchData = async () => {
         try {
+            const endpoint = 'http://localhost:8080/api/v1/article/headline';
             const response = await fetch(
-                "https://raw.githubusercontent.com/dentamuhajir/test/refs/heads/master/headline-article.json"
+                endpoint
             );
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
             }
             const data = await response.json();
-            return data.data;
+            return data;
         } catch (error) {
             console.error("Error fetching data:", error);
             throw error;
