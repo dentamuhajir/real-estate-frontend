@@ -1,0 +1,48 @@
+.nav .nav-item button.active {
+    background-color: transparent;
+    color: #3e3b3b !important;
+}
+.nav .nav-item button.active::after {
+    content: "";
+    border-bottom: 4px solid rgb(240, 160, 10);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 5px;
+}
+
+.link-article-detail {
+    text-decoration: none;
+    color: #000000 !important;
+}
+
+.nav-pills .nav-link {
+    color: silver;
+}
+
+.article-view-all {
+    text-decoration: none;
+    color: #ED8B00;
+}
+
+img.card-img-top {
+    width: auto;
+    height: 185px;
+    object-fit: cover;
+}
+
+h5.card-title {
+    margin: auto;
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.card-article {
+    cursor: pointer;
+    height: 95%;
+}
