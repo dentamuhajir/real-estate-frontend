@@ -7,7 +7,7 @@ const Headline = () => {
 
     const getArticles = async () => {
         try {
-            const item = await articleServiceInstance.fetchData()
+            const item = await articleServiceInstance.fetchDataArticleHeadline()
             setArticle(item)
         } catch(error) {
             console.error('Error:', error);

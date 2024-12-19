@@ -1,8 +1,25 @@
 class ArticleService {
 
-    fetchData = async () => {
+    fetchDataArticleHeadline = async () => {
         try {
             const endpoint = 'http://localhost:8080/api/v1/article/headline';
+            const response = await fetch(
+                endpoint
+            );
+            if (!response.ok) {
+                throw new Error("Failed to fetch data");
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching data:", error);
+            throw error;
+        }
+    };
+
+    fetchDataArticleListByCategories = async () => {
+        try {
+            const endpoint = 'http://localhost:8080/api/v1/article/categories';
             const response = await fetch(
                 endpoint
             );
