@@ -43,19 +43,21 @@ const ArticleList = () => {
 
             <div className="container p-2">
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    {/* <li class="nav-item" role="presentation" *ngFor="let article of articleList; let i = index "> */}
-                    {/* <button class="nav-link fw-semibold active position-relative" id="pills-home-tab" data-bs-toggle="pill" [attr.data-bs-target]="'#pills-'+article.categoryCode" type="button" role="tab" aria-controls="pills-home" [ngClass]="{'active show': i === 0}" aria-selected="true">{{ article.categoryName }}</button> */}
-                    
                     {Object.keys(article).map((category, index) => (       
                         <li className="nav-item" role="presentation">
-                            <button className={index==0 ? 'nav-link fw-semibold active position-relative ' : 'nav-link fw-semibold position-relative'} id="pills-home-tab" data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-home"  aria-selected="true">
-                                { category  } { index }
+                            <button className={index==0 ? 'nav-link fw-semibold active position-relative ' : 'nav-link fw-semibold position-relative'} id="pills-home-tab" data-bs-target={"#pills-"+category } data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-home"  aria-selected="true">
+                                { category  }
                             </button>
                         </li>
                     ))}
                 </ul>
                 <div className="tab-content rounded-3 border-primary p-3" id="pills-tabContent">
-                </div> 
+                    {Object.keys(article).map((category, index) => ( 
+                        <div className={index==0 ? 'tab-pane fade active' : 'tab-pane fade'} id={"pills-" + category} role="tabpanel" aria-labelledby="pills-griya-tab">
+                            <h2>Artikel { category }</h2>
+                        </div> 
+                    ))} 
+                </div>
             </div>
         </>      
   )
