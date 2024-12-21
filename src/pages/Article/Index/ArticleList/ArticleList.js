@@ -33,6 +33,7 @@ const ArticleList = () => {
                     <div className="row">
                         <div className="col-10">
                             <h4>Semua Artikel</h4>
+               
                         </div>    
                         <div className="col-2 text-end">
                             <a className="article-view-all" routerLink="all">lihat semua</a>
@@ -41,20 +42,37 @@ const ArticleList = () => {
                 </div>
             </div>
 
+            
             <div className="container p-2">
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    {Object.keys(article).map((category, index) => (       
+                    {article.map((item, index) => (       
                         <li className="nav-item" role="presentation">
-                            <button className={index==0 ? 'nav-link fw-semibold active position-relative ' : 'nav-link fw-semibold position-relative'} id="pills-home-tab" data-bs-target={"#pills-"+category } data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-home"  aria-selected="true">
-                                { category  }
+                            <button className={index==0 ? 'nav-link fw-semibold active position-relative ' : 'nav-link fw-semibold position-relative'} id="pills-home-tab" data-bs-target={"#pills-"+item.category } data-bs-toggle="pill" type="button" role="tab" aria-controls="pills-home"  aria-selected="true">
+                                { item.category  }
                             </button>
                         </li>
                     ))}
                 </ul>
                 <div className="tab-content rounded-3 border-primary p-3" id="pills-tabContent">
-                    {Object.keys(article).map((category, index) => ( 
-                        <div className={index==0 ? 'tab-pane fade active' : 'tab-pane fade'} id={"pills-" + category} role="tabpanel" aria-labelledby="pills-griya-tab">
-                            <h2>Artikel { category }</h2>
+                    {article.map((item, index) => ( 
+                        <div className={index==0 ? 'tab-pane fade active show' : 'tab-pane fade'} id={"pills-" + item.category} role="tabpanel" aria-labelledby="pills-griya-tab">
+                            <h5>{ item.category }</h5>
+                            <div class="container">
+                                <div class="row">
+                                { item.articleList.map((article) => (
+                                    <div class="col-md-3">
+                                        <div class="card card-article mb-4" >
+                                            <img src={ article.Photo } class="card-img-top" alt="..." loading="lazy"/>
+                                            <div class="card-body">
+                                                <a class="link-article-detail"><h5 class="card-title">{ article.Title }</h5></a>
+                                                <div class="mb-1 text-muted"> { article.Category }</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                ))}
+                                </div>
+                            </div>
                         </div> 
                     ))} 
                 </div>
