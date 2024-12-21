@@ -32,7 +32,7 @@ const Headline = () => {
                                 <div class="card bg-dark text-white border-0 rounded-4">
                                     <img class="card-img image-headline rounded-4"
                                         src={ item.Photo }
-                                        alt="item.imageAlt" loading="lazy" />
+                                        alt="item.imageAlt" />
                                     <div class="card-img-overlay rounded-4">
                                         <h5 class="card-title">{ item.Title } </h5>
                                         <p class="card-text"></p>
