@@ -22,7 +22,7 @@ class ArticleService {
     };
 
     fetchDataArticleListByCategories = async () => {
-        try {
+        try { 
             const endpoint = 'http://localhost:8081/api/article/list';
             const response = await fetch(
                 endpoint
@@ -31,7 +31,10 @@ class ArticleService {
                 throw new Error("Failed to fetch data");
             }
             const data = await response.json();
-            return data;
+
+            if(data.code == 200) {
+                return data.data;
+            }
         } catch (error) {
             console.error("Error fetching data:", error);
             throw error;
