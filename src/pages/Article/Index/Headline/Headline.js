@@ -20,8 +20,6 @@ const Headline = () => {
         getArticles()
     },[])
 
-    console.log("article :" + article)
-
     return (
         <div class="container mt-5">
             <div class="row">

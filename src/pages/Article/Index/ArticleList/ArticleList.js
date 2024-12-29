@@ -20,11 +20,6 @@ const ArticleList = () => {
     useEffect(() => {
         getArticles()
     },[])
-
-    console.log(article)
-    // {Object.keys(article).map((category) => (
-    //     console.log(category)
-    // ))}
     
     return (   
         <>
@@ -62,10 +57,10 @@ const ArticleList = () => {
                                 { item.articleList.map((article) => (
                                     <div class="col-md-3">
                                         <div class="card card-article mb-4" >
-                                            <img src={ article.Photo } class="card-img-top" alt="..." loading="lazy"/>
+                                            <img src={ article.photo } class="card-img-top" alt="..." loading="lazy"/>
                                             <div class="card-body">
-                                                <a class="link-article-detail"><h5 class="card-title">{ article.Title }</h5></a>
-                                                <div class="mb-1 text-muted"> { article.Category }</div>
+                                                <a class="link-article-detail"><h5 class="card-title">{ article.title }</h5></a>
+                                                <div class="mb-1 text-muted"> { article.category }</div>
                                             </div>
                                         </div>
                                     </div>
