@@ -31,19 +31,18 @@ const Headline = () => {
                             <a routerLink="">
                                 <div class="card bg-dark text-white border-0 rounded-4">
                                     <img class="card-img image-headline rounded-4"
-                                        src={ item.Photo }
+                                        src={ item.photo }
                                         alt="item.imageAlt" />
                                     <div class="card-img-overlay rounded-4">
-                                        <h5 class="card-title">{ item.Title } </h5>
+                                        <h5 class="card-title">{ item.title } </h5>
                                         <p class="card-text"></p>
-                                        <p class="card-text">{ item.Category }  </p>
+                                        <p class="card-text">{ item.category }  </p>
                                     </div>
                                 </div>
                             </a> 
                         </div>
                     )                    
                 })}
-
             </div>
         </div>
   )
