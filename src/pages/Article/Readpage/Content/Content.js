@@ -1,7 +1,9 @@
 import React from 'react'
 import './Content.css'
+import { useParams } from 'react-router-dom';
 
 const Content = () => {
+    const { id } = useParams();
   return (
     <div class="griya-product container mt-3">
         <div class="row">
@@ -20,7 +22,7 @@ const Content = () => {
                     calendar_month
                 </span>
                 <p class="griya-product-date">
-
+                    { id }
                 </p>
             </div>
             <div class="col-12 mt-1">
