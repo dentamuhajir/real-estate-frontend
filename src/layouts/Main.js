@@ -8,6 +8,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer"
 
 import IndexArticle from "../pages/Article/Index/Index";
+import ReadpageArticle from "../pages/Article/Readpage/Readpage";
 import Griya from "../pages/Griya/Griya";
 
 function Main() {
@@ -18,6 +19,7 @@ function Main() {
                     <Routes>
                         <Route path="/" element={<Griya/>} />
                         <Route path="/article" element={<IndexArticle/>} />
+                        <Route path="/article/readpage" element={<ReadpageArticle/>} />
                     </Routes>
                 </div>
             <Footer/>
