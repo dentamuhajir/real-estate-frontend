@@ -19,7 +19,7 @@ function Main() {
                     <Routes>
                         <Route path="/" element={<Griya/>} />
                         <Route path="/article" element={<IndexArticle/>} />
-                        <Route path="/article/readpage" element={<ReadpageArticle/>} />
+                        <Route path="/article/readpage/:id" element={<ReadpageArticle/>} />
                     </Routes>
                 </div>
             <Footer/>
