@@ -27,7 +27,7 @@ const Headline = () => {
                 { article.map((item) => {
                     return (
                         <div class="col-md-6">
-                            <NavLink to={"/article/detail/" + item.id } >
+                            <NavLink to={"/article/readpage/" + item.id } >
                                 <div class="card bg-dark text-white border-0 rounded-4">
                                     <img class="card-img image-headline rounded-4"
                                         src={ item.photo }
