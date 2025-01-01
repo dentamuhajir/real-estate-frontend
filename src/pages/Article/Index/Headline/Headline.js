@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Headline.css'
 import articleServiceInstance from '../../../../services/ArticleService'
+import { NavLink } from 'react-router-dom'
 
 const Headline = () => {
     const [article, setArticle] = useState([])
@@ -26,7 +27,7 @@ const Headline = () => {
                 { article.map((item) => {
                     return (
                         <div class="col-md-6">
-                            <a routerLink="">
+                            <NavLink to={"/article/detail/" + item.id } >
                                 <div class="card bg-dark text-white border-0 rounded-4">
                                     <img class="card-img image-headline rounded-4"
                                         src={ item.photo }
@@ -37,7 +38,7 @@ const Headline = () => {
                                         <p class="card-text">{ item.category }  </p>
                                     </div>
                                 </div>
-                            </a> 
+                            </NavLink>
                         </div>
                     )                    
                 })}
