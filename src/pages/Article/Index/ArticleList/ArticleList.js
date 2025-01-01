@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ArticleList.css'
 import articleServiceInstance from '../../../../services/ArticleService'
+import { NavLink } from 'react-router-dom'
 
 const ArticleList = () => {
 
@@ -50,20 +51,25 @@ const ArticleList = () => {
                 </ul>
                 <div className="tab-content rounded-3 border-primary p-3" id="pills-tabContent">
                     {article.map((item, index) => ( 
+                        
                         <div className={index==0 ? 'tab-pane fade active show' : 'tab-pane fade'} id={"pills-" + item.category} role="tabpanel" aria-labelledby="pills-griya-tab">
                             <h5>{ item.category }</h5>
                             <div class="container">
                                 <div class="row">
                                 { item.articleList.map((article) => (
+                                    
                                     <div class="col-md-3">
                                         <div class="card card-article mb-4" >
                                             <img src={ article.photo } class="card-img-top" alt="..." loading="lazy"/>
                                             <div class="card-body">
-                                                <a class="link-article-detail"><h5 class="card-title">{ article.title }</h5></a>
+                                                <NavLink to={"/article/readpage/" + article.id } >
+                                                    <a class="link-article-detail"><h5 class="card-title">{ article.title }</h5></a>
+                                                </NavLink>
                                                 <div class="mb-1 text-muted"> { article.category }</div>
                                             </div>
                                         </div>
                                     </div>
+
 
                                 ))}
                                 </div>
