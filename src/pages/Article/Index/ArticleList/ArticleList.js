@@ -62,7 +62,7 @@ const ArticleList = () => {
                                         <div class="card card-article mb-3 rounded-4">
                                             <img src={ article.photo } class="card-img-top rounded-top-4" alt="..." loading="lazy"/>
                                             <div class="card-body">
-                                                <NavLink className="link-article-detail" to={"/article/readpage/" + article.id } >
+                                                <NavLink className="link-article-detail" to={"/article/readpage/" + article.id + "/" + article.title.replace(/[\W_]/g, '-').toLowerCase() } >
                                                     <h5 class="card-title">{ article.title }</h5>
                                                 </NavLink>
                                                 <div class="mb-1 text-muted"> { article.category }</div>
