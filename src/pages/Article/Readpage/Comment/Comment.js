@@ -40,7 +40,7 @@ const Comment = () => {
                             </span>
                         </div>
                     </div>
-                    {article.commentList.map((comment) => (
+                    {article.commentList?.map((comment) => (
                     <div class="card p-3 mb-4">
                         <div class="d-flex justify-content-between align-items-center">
                       <div class="user d-flex flex-row align-items-center">
