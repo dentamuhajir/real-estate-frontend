@@ -52,18 +52,18 @@ const ArticleList = () => {
                 <div className="tab-content rounded-3 border-primary p-3" id="pills-tabContent">
                     {article.map((item, index) => ( 
                         
-                        <div className={index==0 ? 'tab-pane fade active show' : 'tab-pane fade'} id={"pills-" + item.category} role="tabpanel" aria-labelledby="pills-griya-tab">
+                        <div className={index===0 ? 'tab-pane fade active show' : 'tab-pane fade'} id={"pills-" + item.category} role="tabpanel" aria-labelledby="pills-griya-tab">
                             <h5>{ item.category }</h5>
                             <div class="container">
                                 <div class="row">
                                 { item.articleList.map((article) => (
                                     
-                                    <div class="col-md-3">
-                                        <div class="card card-article mb-4" >
-                                            <img src={ article.photo } class="card-img-top" alt="..." loading="lazy"/>
+                                    <div class="col-md-3 mb-2">
+                                        <div class="card card-article mb-3 rounded-4">
+                                            <img src={ article.photo } class="card-img-top rounded-top-4" alt="..." loading="lazy"/>
                                             <div class="card-body">
-                                                <NavLink to={"/article/readpage/" + article.id } >
-                                                    <a class="link-article-detail"><h5 class="card-title">{ article.title }</h5></a>
+                                                <NavLink className="link-article-detail" to={"/article/readpage/" + article.id } >
+                                                    <h5 class="card-title">{ article.title }</h5>
                                                 </NavLink>
                                                 <div class="mb-1 text-muted"> { article.category }</div>
                                             </div>
