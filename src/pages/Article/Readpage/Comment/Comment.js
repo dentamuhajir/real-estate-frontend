@@ -30,15 +30,8 @@ const Comment = () => {
             <div class="row  d-flex justify-content-center">
                 <div class="col-md-8">
                     <div class="headings d-flex justify-content-between align-items-center mb-3">
-                        <h5>Comments(6)</h5>
-                        <div class="buttons">
-                            <span class="badge-comment bg-white d-flex flex-row align-items-center">
-                                <span class="text-primary">Comments "ON"</span>
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                                </div>
-                            </span>
-                        </div>
+                        <h5>Comments({ article.commentList?.length  })</h5>
+                        
                     </div>
                     {article.commentList?.map((comment) => (
                     <div class="card p-3 mb-4">
