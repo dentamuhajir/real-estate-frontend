@@ -24,7 +24,7 @@ const Banner = () => {
             <div class="carousel-inner banner" id="home">
                 <div>
                     <div class="carousel-item active">
-                        <img src="https://www.bankbsi.co.id/storage/banners/CwDXWr6UIulQLwDlUxVN3WFllaDvq4gNjtlNgiBm.jpg" class="d-block w-100 bannerImage" />
+                        <img src="https://placehold.co/1300x300" class="d-block w-100 bannerImage" />
                         <div class="container-button">
                             <a target="_blank" class="btn rounded-pill btn-lg sticky-bottom btn-light fw-bold">
                                 <div class="d-flex align-items-center">
