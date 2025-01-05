@@ -40,11 +40,12 @@ const Comment = () => {
                             </span>
                         </div>
                     </div>
-                    <div class="card p-3">
+                    {article.commentList.map((comment) => (
+                    <div class="card p-3 mb-4">
                         <div class="d-flex justify-content-between align-items-center">
                       <div class="user d-flex flex-row align-items-center">
                         <img src="https://i.imgur.com/hczKIze.jpg" width="30" class="user-img rounded-circle mr-2" />
-                        <span><small class="font-weight-bold text-primary">&nbsp;&nbsp; anonymous</small> <small class="font-weight-bold">Hmm, This poster looks cool</small></span>
+                        <span><small class="font-weight-bold text-primary">anonymous</small> <small class="font-weight-bold">{ comment.comments }</small></span>
                       </div>
                       <small>2 days ago</small>
                       </div>
@@ -62,6 +63,7 @@ const Comment = () => {
                         </div>
                       </div>
                     </div> 
+                    ))}
                 </div>
             </div>
         </div>
