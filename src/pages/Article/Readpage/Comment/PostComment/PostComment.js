@@ -1,24 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
-import commentServiceInstance from '../../../../../services/CommentService';
 
-const PostComment = () => {
-
-  const { id } = useParams();
+const PostComment = ({postComment}) => {
  
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const comment = formData.get('inputComment');
-   
-    try {
-      commentServiceInstance.postCommentData(comment, id)
-    
-    } catch(error) {
-        console.error('Error:', error);
-    } finally {
-        console.warn('Post Comment api done !');
-    }
+    postComment(comment)
   }
 
   return (

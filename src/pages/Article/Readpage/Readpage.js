@@ -3,6 +3,7 @@ import Comment from './Comment/ListComment/Comment'
 import Content from './Content/Content'
 import PostComment from './Comment/PostComment/PostComment'
 import articleServiceInstance from '../../../services/ArticleService'
+import commentServiceInstance from '../../../services/CommentService'
 import { useParams } from 'react-router-dom'
 
 const Readpage = () => {
@@ -19,6 +20,17 @@ const Readpage = () => {
     }
   }
 
+  const postDataComment = async (comment) => {
+    try {
+      commentServiceInstance.postCommentData(comment, id)
+      getComment()
+    } catch(error) {
+        console.error('Error:', error);
+    } finally {
+        console.warn('Post Comment api done !');
+    }
+  }
+
   useEffect(() => {
     getComment()
   },[])
@@ -31,7 +43,7 @@ const Readpage = () => {
         <div class="container mt-5">
           <div class="row  d-flex justify-content-center">
             <Comment listComment={comment}/>
-            <PostComment/>
+            <PostComment postComment={postDataComment}/>
           </div>
         </div>
     </>
