@@ -22,8 +22,8 @@ const Readpage = () => {
 
   const postDataComment = async (comment) => {
     try {
-      commentServiceInstance.postCommentData(comment, id)
-      getComment()
+      await commentServiceInstance.postCommentData(comment, id)
+      await getComment()
     } catch(error) {
         console.error('Error:', error);
     } finally {
