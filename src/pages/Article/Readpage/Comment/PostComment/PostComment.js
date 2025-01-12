@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
+import commentServiceInstance from '../../../../../services/CommentService';
 
 const PostComment = () => {
 
@@ -8,9 +9,16 @@ const PostComment = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const inputValue = formData.get('inputComment');
+    const comment = formData.get('inputComment');
+   
+    try {
+      commentServiceInstance.postCommentData(comment, id)
     
-    console.log(inputValue, id)
+    } catch(error) {
+        console.error('Error:', error);
+    } finally {
+        console.warn('Post Comment api done !');
+    }
   }
 
   return (
