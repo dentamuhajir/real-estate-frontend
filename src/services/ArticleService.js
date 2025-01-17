@@ -3,7 +3,7 @@ class ArticleService {
     fetchDataArticleHeadline = async () => {
         try {
             const endpointGo = 'http://localhost:8080/api/v1/article/headline'
-            const endpointJava = 'http://localhost:8081/api/article/headline';
+            //const endpointJava = 'http://localhost:8081/api/article/headline';
             const response = await fetch(
                 endpointGo
             );
@@ -13,7 +13,7 @@ class ArticleService {
 
             const data = await response.json();
 
-            if(data.code == 200) {
+            if(data.code === 200) {
                 return data.data;
             }
         } catch (error) {
@@ -25,7 +25,7 @@ class ArticleService {
     fetchDataArticleListByCategories = async () => {
         try { 
             const endpointGo = 'http://localhost:8080/api/v1/article/categories'
-            const endpointJava = 'http://localhost:8081/api/article/list';
+            //const endpointJava = 'http://localhost:8081/api/article/list';
             const response = await fetch(
                 endpointGo
             );
@@ -34,7 +34,7 @@ class ArticleService {
             }
             const data = await response.json();
 
-            if(data.code == 200) {
+            if(data.code === 200) {
                 return data.data;
             }
         } catch (error) {
@@ -56,7 +56,7 @@ class ArticleService {
 
             const data = await response.json();
 
-            if(data.code == 200) {
+            if(data.code === 200) {
                 return data.data;
             }
         } catch (error) {

@@ -1,5 +1,5 @@
 import './Header.css';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
@@ -17,20 +17,22 @@ function Header() {
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
                                     <NavLink to='/' className='nav-link active'>
-                                        Griya 
+                                        Home 
                                     </NavLink>
                                 </li>
                                 <div class="vr ms-4 me-4"></div>
                                 <li class="nav-item">
                                     <NavLink to='/article' className='nav-link active'>
-                                        Artikel 
+                                        Article 
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active">FAQ</a>
+                                    <a class="nav-link active">Property</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active">Promo</a>
+                                    <NavLink to='/application' className='nav-link active'>
+                                        Application 
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
