@@ -11,10 +11,8 @@ import IndexArticle from "../pages/Article/Index/Index";
 import ReadpageArticle from "../pages/Article/Readpage/Readpage";
 import Griya from "../pages/Griya/Griya";
 import Application from "../pages/Application/Application";
-<<<<<<< Updated upstream
-=======
 import Property from "../pages/Property/Property";
->>>>>>> Stashed changes
+
 
 function Main() {
     return (
@@ -26,10 +24,7 @@ function Main() {
                         <Route path="/article" element={<IndexArticle/>} />
                         <Route path="/article/readpage/:id/:slug" element={<ReadpageArticle/>} />
                         <Route path="/application" element={<Application/>} />
-<<<<<<< Updated upstream
-=======
                         <Route path="/propery" element={<Property/>} />
->>>>>>> Stashed changes
                     </Routes>
                 </div>
             <Footer/>

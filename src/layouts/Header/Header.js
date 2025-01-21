@@ -27,13 +27,10 @@ function Header() {
                                     </NavLink>
                                 </li>
                                 <li class="nav-item">
-<<<<<<< Updated upstream
-                                    <a class="nav-link active">Property</a>
-=======
                                     <NavLink to='/property' className='nav-link active'>
                                         Property 
                                     </NavLink>
->>>>>>> Stashed changes
+
                                 </li>
                                 <li class="nav-item">
                                     <NavLink to='/application' className='nav-link active'>
