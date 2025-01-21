@@ -11,6 +11,8 @@ import IndexArticle from "../pages/Article/Index/Index";
 import ReadpageArticle from "../pages/Article/Readpage/Readpage";
 import Griya from "../pages/Griya/Griya";
 import Application from "../pages/Application/Application";
+import Property from "../pages/Property/Property";
+
 
 function Main() {
     return (
@@ -22,6 +24,7 @@ function Main() {
                         <Route path="/article" element={<IndexArticle/>} />
                         <Route path="/article/readpage/:id/:slug" element={<ReadpageArticle/>} />
                         <Route path="/application" element={<Application/>} />
+                        <Route path="/propery" element={<Property/>} />
                     </Routes>
                 </div>
             <Footer/>
