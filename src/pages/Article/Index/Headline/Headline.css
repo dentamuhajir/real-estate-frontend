@@ -6,7 +6,15 @@
     background: linear-gradient(180deg, color(display-p3 1 1 1 / 0.00) 0.82%, color(display-p3 0 0.4863 0.502 / 0.70) 51.74%, color(display-p3 0.0011 0.2435 0.2513 / 0.80) 100.82%);
 }
 
+.card-img-overlay-headline {
+    background: none;
+}
+
 .image-headline {
     height:300px;
     object-fit:cover;
+}
+
+.image-headline-placeholder {
+    width:633px;
 }
