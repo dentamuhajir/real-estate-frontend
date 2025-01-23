@@ -33,8 +33,8 @@ function Header() {
 
                                 </li>
                                 <li class="nav-item">
-                                    <NavLink to='/application' className='nav-link active'>
-                                        Application 
+                                    <NavLink to='/buy-ability' className='nav-link active'>
+                                        Buy Ability 
                                     </NavLink>
                                 </li>
                             </ul>
