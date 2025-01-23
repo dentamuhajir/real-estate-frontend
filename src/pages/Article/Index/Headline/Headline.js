@@ -21,6 +21,23 @@ const Headline = () => {
         getArticles()
     },[])
 
+    const placeholderItems = []
+    
+    for(let i = 0; i < 2; i++) {
+        placeholderItems.push(
+            <div class="col-md-6 placeholder-wave">
+                <div class="card bg-dark text-white border-0 rounded-4 placeholder bg-light">
+                    <img class="card-img image-headline image-headline-placeholder rounded-4 placeholder" alt="item.imageAlt" />
+                    <div class="card-img-overlay card-img-overlay-headline rounded-4">
+                        <h5 class="card-title placeholder bg-light"></h5>
+                        <p class="card-text placeholder bg-light"></p>
+                        <p class="card-text placeholder bg-light"></p>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <div class="container mt-5">
             <div class="row">
@@ -47,28 +64,7 @@ const Headline = () => {
                     )
                     : 
                     (
-                        <>
-                        <div class="col-md-6 placeholder-wave">
-                            <div class="card bg-dark text-white border-0 rounded-4 placeholder bg-light">
-                                <img class="card-img image-headline image-headline-placeholder rounded-4 placeholder" alt="item.imageAlt" />
-                                <div class="card-img-overlay card-img-overlay-headline rounded-4">
-                                    <h5 class="card-title placeholder bg-light"></h5>
-                                    <p class="card-text placeholder bg-light"></p>
-                                    <p class="card-text placeholder bg-light"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 placeholder-wave">
-                            <div class="card bg-dark text-white border-0 rounded-4 placeholder bg-light">
-                                <img class="card-img image-headline image-headline-placeholder rounded-4 placeholder" alt="item.imageAlt"/>
-                                <div class="card-img-overlay card-img-overlay-headline rounded-4">
-                                    <h5 class="card-title placeholder bg-light"></h5>
-                                    <p class="card-text placeholder bg-light"></p>
-                                    <p class="card-text placeholder bg-light"></p>
-                                </div>
-                            </div>
-                        </div>
-                        </>
+                        placeholderItems
                     )
                 }
             </div>
