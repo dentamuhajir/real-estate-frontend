@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import buyAbilityServiceInstance from '../../../services/BuyAbilityService'
 
 const Form = () => {
+  const [result, setResult] = useState([])
   const handleSubmit = (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)
@@ -19,14 +20,17 @@ const Form = () => {
 
   const postBuyAbilityForm = async (request) => {
     try {
-      await buyAbilityServiceInstance.postBuyAbility(request)
+      const callback = await buyAbilityServiceInstance.postBuyAbility(request)
+      setResult(callback)
     } catch(error) {
         console.error('Error:', error);
     } finally {
         console.warn('Post Buy Ability api done !');
     }
   }
+
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <div class="mb-3">
         <label for="" className="form-label">What is the price of the property you want to buy??</label>
@@ -61,6 +65,46 @@ const Form = () => {
         <button type="submit" className="btn btn-primary btn-large">See what you can afford</button>
       </div>
     </form>
+
+    <div class="container my-5">
+      <div class="row justify-content-center">
+          <div class="col-md-6">
+              <div class="card shadow-lg">
+                  <div class="card-header text-center bg-primary text-white">
+                      <h5>Loan Affordability Details</h5>
+                  </div>
+                  <div class="card-body">
+                      <p><strong>Loan Amount:</strong> <span id="loanAmount">$100,000</span></p>
+                      <p><strong>Monthly EMI:</strong> <span id="monthlyEMI">$1,500</span></p>
+                      <p><strong>Affordable EMI:</strong> <span id="affordableEMI">$1,200</span></p>
+                      <p><strong>Affordability Status:</strong> 
+                          <span id="isAffordable" class="badge bg-danger">Not Affordable</span>
+                      </p>
+                      <div class="mt-4">
+                          <h6>EMI Affordability Progress</h6>
+                          <div class="progress">
+                              <div 
+                                  id="emiProgressBar" 
+                                  class="progress-bar bg-danger" 
+                                  role="progressbar" 
+                                  style={{width: '80%'}} 
+                                  aria-valuenow="80" 
+                                  aria-valuemin="0" 
+                                  aria-valuemax="100">
+                                  80%
+                              </div>
+                          </div>
+                          <small class="text-muted">Affordable EMI should be greater than Monthly EMI for affordability.</small>
+                      </div>
+                  </div>
+                  <div class="card-footer text-center">
+                      <button id="updateInfo" class="btn btn-primary">Update Info</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </>
   )
 }
 
