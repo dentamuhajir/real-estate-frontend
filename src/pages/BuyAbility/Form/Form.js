@@ -5,7 +5,7 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)
-
+ 
     const formValues = [{
       propertyPrice: formData.get('property-price'),
       downPayment: formData.get('down-payment'),
@@ -15,7 +15,6 @@ const Form = () => {
     }]
 
     postBuyAbilityForm(formValues)
-
   }
 
   const postBuyAbilityForm = async (request) => {
