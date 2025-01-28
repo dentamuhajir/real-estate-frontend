@@ -1,17 +1,31 @@
 import React from 'react'
+import buyAbilityServiceInstance from '../../../services/BuyAbilityService'
 
 const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const formData = new FormData(event.target)
-    let propertyPrice = formData.get('property-price')
-    let downPayment = formData.get('down-payment')
-    let monthlyIncome = formData.get('monthly-income')
-    let loanTenure = formData.get('loan-tenure')
-    let annualInterestRate = formData.get('annual-interest-rate')
 
-    
-    alert("click " + formData.get('property-price'));
+    const formValues = [{
+      propertyPrice: formData.get('property-price'),
+      downPayment: formData.get('down-payment'),
+      monthlyIncome: formData.get('monthly-income'),
+      loanTenure: formData.get('loan-tenure'),
+      annualInterestRate: formData.get('annual-interest-rate') 
+    }]
+
+    postBuyAbilityForm(formValues)
+
+  }
+
+  const postBuyAbilityForm = async (request) => {
+    try {
+      await buyAbilityServiceInstance.postBuyAbility(request)
+    } catch(error) {
+        console.error('Error:', error);
+    } finally {
+        console.warn('Post Buy Ability api done !');
+    }
   }
   return (
     <form onSubmit={handleSubmit}>
