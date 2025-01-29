@@ -12,6 +12,7 @@ import ReadpageArticle from "../pages/Article/Readpage/Readpage";
 import Griya from "../pages/Griya/Griya";
 import BuyAbility from "../pages/BuyAbility/BuyAbility";
 import Property from "../pages/Property/Property";
+import Register from "../pages/Register/Register";
 
 
 function Main() {
@@ -25,6 +26,7 @@ function Main() {
                         <Route path="/article/readpage/:id/:slug" element={<ReadpageArticle/>} />
                         <Route path="/buy-ability" element={<BuyAbility/>} />
                         <Route path="/property" element={<Property/>} />
+                        <Route path="/register" element={<Register/>} />
                     </Routes>
                 </div>
             <Footer/>
