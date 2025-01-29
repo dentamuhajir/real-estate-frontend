@@ -28,6 +28,14 @@ const Form = () => {
         console.warn('Post Buy Ability api done !');
     }
   }
+
+  // useEffect(() => {
+  //   postBuyAbilityForm()
+  // },[])
+
+  if(result.length !== 0) {
+    console.log("contain data result")
+  }
   
   return (
     <>
@@ -74,11 +82,21 @@ const Form = () => {
                         <h5>Loan Affordability Details</h5>
                     </div>
                     <div class="card-body">
-                        <p><strong>Loan Amount:</strong> <span id="loanAmount">$100,000</span></p>
-                        <p><strong>Monthly EMI:</strong> <span id="monthlyEMI">$1,500</span></p>
-                        <p><strong>Affordable EMI:</strong> <span id="affordableEMI">$1,200</span></p>
+                        <p><strong>Loan Amount:</strong> <span id="loanAmount">Rp { result.loanAmount }</span></p>
+                        <p><strong>Monthly EMI:</strong> <span id="monthlyEMI">Rp { result.monthlyEMI }</span></p>
+                        <p><strong>Affordable EMI:</strong> <span id="affordableEMI">Rp { result.affordableEMI }</span></p>
                         <p><strong>Affordability Status:</strong> 
+                            { result.affordable ? 
+                            (
+                            <span id="isAffordable" class="badge bg-success"> Affordable</span>
+
+                            ) 
+                            : 
+                            (
                             <span id="isAffordable" class="badge bg-danger">Not Affordable</span>
+
+                            )
+                            }
                         </p>
                         <div class="mt-4">
                             <h6>EMI Affordability Progress</h6>
