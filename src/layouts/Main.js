@@ -12,7 +12,7 @@ import ReadpageArticle from "../pages/Article/Readpage/Readpage";
 import Griya from "../pages/Griya/Griya";
 import BuyAbility from "../pages/BuyAbility/BuyAbility";
 import Property from "../pages/Property/Property";
-import Register from "../pages/Register/Register";
+import Register from "../pages/Auth/Register/Register";
 
 
 function Main() {
