@@ -2,10 +2,11 @@ class ArticleService {
 
     fetchDataArticleHeadline = async () => {
         try {
-            const endpointGo = 'http://localhost:8080/api/v1/article/headline'
-            //const endpointJava = 'http://localhost:8081/api/article/headline';
+            //const endpointGo = 'http://localhost:8080/api/v1/article/headline'
+            const endpointJava = 'http://localhost:8081/api/article/headline';
             const response = await fetch(
-                endpointGo
+                //endpointGo
+                endpointJava
             );
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
@@ -24,10 +25,11 @@ class ArticleService {
 
     fetchDataArticleListByCategories = async () => {
         try { 
-            const endpointGo = 'http://localhost:8080/api/v1/article/categories'
-            //const endpointJava = 'http://localhost:8081/api/article/list';
+            //const endpointGo = 'http://localhost:8080/api/v1/article/categories'
+            const endpointJava = 'http://localhost:8081/api/article/list';
             const response = await fetch(
-                endpointGo
+                //endpointGo
+                endpointJava
             );
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
