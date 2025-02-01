@@ -14,7 +14,7 @@ class AuthService {
                     fullName: request[0].fullName,
                     email: request[0].email,
                     address: request[0].address,
-                    //idCard: request[0].idCard,
+                    idCard: request[0].idCard,
                     password: request[0].password,
                     confirmPassword: request[0].confirmPassword 
                 }),
