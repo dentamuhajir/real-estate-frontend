@@ -4,21 +4,9 @@ import AuthServiceInstance from '../../../services/AuthService'
 const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
-        const formData = new FormData(event.target)
+        const formData = new FormData(event.target);
 
- 
-        const formValues = [{
-            fullName: formData.get('full-name'),
-            email: formData.get('email'),
-            address: formData.get('address'),
-            idCard: formData.get('id-card'),
-            password: formData.get('password'),
-            confirmPassword: formData.get('confirm-password')  
-        }]
-
-        AuthServiceInstance.userRegistration(formValues)        
-
-        //console.log(formValues)
+        AuthServiceInstance.userRegistration(formData);
     }
 
     return (
