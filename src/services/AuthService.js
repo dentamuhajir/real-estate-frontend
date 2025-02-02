@@ -4,26 +4,20 @@ class AuthService {
         try {
             const endpoint = 'http://localhost:8081/api/user/register';
 
+            const formData = new FormData();
+
             const options = {
                 method: "POST",
-                headers: {
-                  Accept: "application/json",
-                  "Content-Type": "application/json;charset=UTF-8",
-                },
-                body: JSON.stringify({
-                    fullName: request[0].fullName,
-                    email: request[0].email,
-                    address: request[0].address,
-                    idCard: request[0].idCard,
-                    password: request[0].password,
-                    confirmPassword: request[0].confirmPassword 
-                }),
+                body: formData, 
+                credentials: "include", 
             };
 
             const response = await fetch(
                 endpoint, 
                 options
             );
+
+            console.log(response)
 
             if (!response.ok) {
                 throw new Error("Failed to fetch data");
