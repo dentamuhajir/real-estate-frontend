@@ -9,7 +9,7 @@ import Footer from "./Footer/Footer"
 
 import IndexArticle from "../pages/Article/Index/Index";
 import ReadpageArticle from "../pages/Article/Readpage/Readpage";
-import Griya from "../pages/Griya/Griya";
+import Griya from "../pages/Home/Griya";
 import BuyAbility from "../pages/BuyAbility/BuyAbility";
 import Property from "../pages/Property/Property";
 import Register from "../pages/Auth/Register/Register";
@@ -18,7 +18,7 @@ import Register from "../pages/Auth/Register/Register";
 function Main() {
     return (
         <BrowserRouter>
-            <Header/>
+            {/* <Header/> */}
                 <div class="container mb-5">
                     <Routes>
                         <Route path="/" element={<Griya/>} />
@@ -29,7 +29,7 @@ function Main() {
                         <Route path="/register" element={<Register/>} />
                     </Routes>
                 </div>
-            <Footer/>
+            {/* <Footer/> */}
         </BrowserRouter>
     );
 }
