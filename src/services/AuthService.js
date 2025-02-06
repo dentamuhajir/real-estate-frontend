@@ -2,13 +2,13 @@ class AuthService {
 
     userRegistration = async (request) => {
         try {
+            console.log(request)
+            return;
             const endpoint = 'http://localhost:8081/api/user/register';
-
-            const formData = new FormData();
 
             const options = {
                 method: "POST",
-                body: formData, 
+                body: request, 
                 credentials: "include", 
             };
 

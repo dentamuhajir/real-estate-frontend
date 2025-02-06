@@ -1,24 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import AuthServiceInstance from '../../../services/AuthService'
 
 const Register = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        const formData = new FormData(event.target);
+    const [formData, setFormData] = useState({
+        full_name:'',
+        // email:"",
+        // address:"",
+        // password:"",
+        // retype_password:""
+    })
 
-        AuthServiceInstance.userRegistration(formData);
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    };
+
+    const handleSubmit = (event) => {        
+        event.preventDefault()
+        alert(`Name: ${formData.full_name}`)
+        //const data = new FormData();
+
+        //data.append('fullName', formData.full_name);
+        // data.append('email', formData.email);
+        // data.append('address', formData.address);
+        // data.append('password', formData.password);
+        // data.append('retypePassword', formData.retype_password);
+
+        //AuthServiceInstance.userRegistration(data);
     }
 
     return (
         <div className="container-fluid w-50 mt-3">
             <h3 className='text-center'>Register</h3>
-            <p className='text-center fw-bold'>Buying a home is a big move. We're here to help you every step of the way.</p>
+            {/* <p className='text-center fw-bold'>Buying a home is a big move. We're here to help you every step of the way.</p> */}
             <form onSubmit={handleSubmit}>
             <div class="mb-3">
                 <label for="" className="form-label">Full Name</label>
-                <input type="text" name="full-name" className="form-control" id="" required/>
+                <input type="text" name="name" value={ formData.full_name } onChange={ handleChange } className="form-control" />
             </div>
-            <div class="mb-3">
+            {/* <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" name="email" class="form-control" id="email" required />
             </div>
@@ -40,7 +60,7 @@ const Register = () => {
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" className="btn btn-primary btn-large">Register</button>
-            </div>
+            </div> */}
             </form>
         </div>
     )

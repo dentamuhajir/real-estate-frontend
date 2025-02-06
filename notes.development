@@ -5,6 +5,7 @@
 - install dependency/library
         npm install react-router-dom
         npm install bootstrap
+
 # Reference
 - Project Structure 
         https://www.xenonstack.com/insights/reactjs-project-structure
@@ -13,12 +14,13 @@
 - Conditional Class
         https://www.dhiwise.com/post/mastering-react-add-class-conditionally-a-comprehensive-guide
 - Form Data 
+        https://www.freecodecamp.org/news/how-to-build-forms-in-react/
         https://dev.to/ajones_codes/a-better-guide-to-forms-in-react-47f0
 - Application Form
         https://www.jotform.com/build/250164934541455?s=templates
 - Buy Ability
         https://www.zillow.com
-
+        
 # Git 
 
 #Database
