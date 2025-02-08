@@ -18,7 +18,7 @@ import Register from "../pages/Auth/Register/Register";
 function Main() {
     return (
         <BrowserRouter>
-            {/* <Header/> */}
+            <Header/>
                 <div class="container mb-5">
                     <Routes>
                         <Route path="/" element={<Griya/>} />
@@ -29,7 +29,7 @@ function Main() {
                         <Route path="/register" element={<Register/>} />
                     </Routes>
                 </div>
-            {/* <Footer/> */}
+            <Footer/>
         </BrowserRouter>
     );
 }
