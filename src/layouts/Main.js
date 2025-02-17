@@ -13,6 +13,7 @@ import Griya from "../pages/Home/Griya";
 import BuyAbility from "../pages/BuyAbility/BuyAbility";
 import Property from "../pages/Property/Property";
 import Register from "../pages/Auth/Register/Register";
+import Import from "../pages/Auth/Import/Import";
 
 
 function Main() {
@@ -27,6 +28,8 @@ function Main() {
                         <Route path="/buy-ability" element={<BuyAbility/>} />
                         <Route path="/property" element={<Property/>} />
                         <Route path="/register" element={<Register/>} />
+                        <Route path="/import" element={<Import/>} />
+
                     </Routes>
                 </div>
             <Footer/>
